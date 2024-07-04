@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-04T19:09:18.300067" rpa="false" schemaversion="5">
+<suite id="s1" name="Section2" source="/Users/sirawitboonsaem/Desktop/robot/testskill/section2.robot">
+<test id="s1-t1" name="Test case 1: Complete Workflow" line="19">
+<kw name="Open Browser To Nejavu">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:18.412380" level="INFO">Opening browser 'Chrome' to base url 'https://www.nejavu.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-04T19:09:18.412266" elapsed="3.759027"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-04T19:09:22.171748" elapsed="0.385210"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-07-04T19:09:22.557095" elapsed="0.000322"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:09:18.411921" elapsed="4.145612"/>
+</kw>
+<kw name="Close Modal If Present">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:22.558931" level="INFO">Clicking element '//*[@id="top"]/main/div[2]/div[1]/a'.</msg>
+<arg>${MODAL_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-04T19:09:22.558618" elapsed="2.039859"/>
+</kw>
+<arg>Click Element</arg>
+<arg>${MODAL_XPATH}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-07-04T19:09:22.558366" elapsed="2.040199"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:09:22.557774" elapsed="2.040845"/>
+</kw>
+<kw name="Click Cartoon Menu">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:24.599099" level="INFO">Clicking element '//*[@id="top"]/main/div[1]/div[2]/div[2]/div[2]/nav/div/ul/li[3]/a/span'.</msg>
+<arg>${CARTOON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-04T19:09:24.598981" elapsed="3.054655"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:09:24.598791" elapsed="3.054930"/>
+</kw>
+<kw name="Add Books To Cart In First Row">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-04T19:09:27.654315" elapsed="2.287195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:29.941651" elapsed="2.019775"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:31.962005" level="INFO">Executing JavaScript:
+document.getElementById('quick-cart-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('quick-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-04T19:09:31.961581" elapsed="1.015988"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-07-04T19:09:27.654239" elapsed="5.323398"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-04T19:09:32.977831" elapsed="2.273211"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:35.251187" elapsed="2.021046"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:37.272641" level="INFO">Executing JavaScript:
+document.getElementById('quick-cart-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('quick-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-04T19:09:37.272372" elapsed="1.012423"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-07-04T19:09:32.977749" elapsed="5.307111"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-04T19:09:38.285020" elapsed="2.268623"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:40.553770" elapsed="2.018881"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:42.573013" level="INFO">Executing JavaScript:
+document.getElementById('quick-cart-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('quick-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-04T19:09:42.572781" elapsed="1.010885"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-07-04T19:09:38.284957" elapsed="5.298823"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-04T19:09:43.584010" elapsed="2.274876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:45.859083" elapsed="2.015408"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:47.874910" level="INFO">Executing JavaScript:
+document.getElementById('quick-cart-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('quick-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-04T19:09:47.874646" elapsed="1.013059"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-07-04T19:09:43.583902" elapsed="5.303868"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-04T19:09:48.887931" elapsed="2.280456"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:51.168713" elapsed="2.014826"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:53.184042" level="INFO">Executing JavaScript:
+document.getElementById('quick-cart-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('quick-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-04T19:09:53.183688" elapsed="1.011746"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-07-04T19:09:48.887865" elapsed="5.307637"/>
+</iter>
+<var>${i}</var>
+<value>5</value>
+<status status="PASS" start="2024-07-04T19:09:27.654067" elapsed="26.541471"/>
+</for>
+<status status="PASS" start="2024-07-04T19:09:27.653906" elapsed="26.541720"/>
+</kw>
+<kw name="Go To Cart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CART_XPATH}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-04T19:09:54.196596" elapsed="2.020128"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${CART_XPATH}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-07-04T19:09:56.220173" elapsed="3.028523"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:09:59.248984" level="INFO">Clicking element '//*[@id="top"]/main/div[1]/div[1]/div/div/div[2]/div/div[4]/ul/li[2]/div/a'.</msg>
+<arg>${CART_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-04T19:09:59.248828" elapsed="2.322265"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:09:54.196150" elapsed="7.375060"/>
+</kw>
+<kw name="Remove All Books From Cart">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:10:01.571628" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${REMOVE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-04T19:10:01.571526" elapsed="2.038846"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-04T19:10:03.610708" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${CONFIRM_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-04T19:10:03.610557" elapsed="2.035003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-04T19:10:06.648309" level="INFO">Slept 1 second.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-04T19:10:05.645700" elapsed="1.002690"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:10:01.571372" elapsed="5.077097"/>
+</kw>
+<status status="PASS" start="2024-07-04T19:09:18.411676" elapsed="48.236993"/>
+</test>
+<status status="PASS" start="2024-07-04T19:09:18.301318" elapsed="48.347761"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Section2">Section2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
